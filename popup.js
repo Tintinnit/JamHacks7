@@ -4,7 +4,11 @@ const clearBtn = document.getElementById("clear");
 
 let userInput = "";
 submitBtn.addEventListener("click", () => {
-    userInput = document.getElementById("userInput").value;
+    if (userInput === "") {
+        userInput = document.getElementById("userInput").value;
+    }
+    submitBtn.disabled = true;
+    submitBtn.innerHTML = "Simplifying...";
     fetch("http://localhost:3000", {
         method: "POST",
         headers: {
@@ -14,6 +18,8 @@ submitBtn.addEventListener("click", () => {
     })
     .then((response) => response.json())
     .then((data) => {
+        submitBtn.disabled = false;
+        submitBtn.innerHTML = "Retry";
         console.log(data);
         document.getElementById("userInput").value = data.body.trim();
     })
@@ -21,4 +27,5 @@ submitBtn.addEventListener("click", () => {
 
 clearBtn.addEventListener("click", () => {
     document.getElementById("userInput").value = "";
+    submitBtn.innerHTML = "Simplify";
 });
