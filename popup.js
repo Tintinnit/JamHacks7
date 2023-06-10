@@ -13,7 +13,7 @@ submitBtn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
         document.getElementById("message").innerHTML = "";
-        data.body.split("~").forEach((line) => {
+        data.body.split("\n").forEach((line) => {
             const p = document.createElement("p");
             p.textContent = line;
             document.getElementById("message").appendChild(p);

@@ -13,7 +13,7 @@ app.use(json());
 
 app.post("/", async (req, res) => {
     const response = await simplify(req.body.userInput);
-    res.send({body: response.data.choices[0].message.content}); 
+    res.send({body: response.data.choices[0].text}); 
 }); 
 
 app.listen(port, () => {
