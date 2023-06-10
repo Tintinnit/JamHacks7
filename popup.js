@@ -1,13 +1,11 @@
-function saveUserInput(event) {
-    console.log("Script block executed");
-    event.preventDefault(); // Prevent form submission
+console.log("hello world");
+const submitBtn = document.getElementById("submit");
+document.getElementById("message").textContent = "User input: ";
 
-    var userInput = document.getElementById("userInput").value;
-
-    // Display the user input on the screen
+let userInput = "";
+submitBtn.addEventListener("click", () => {
+    userInput = document.getElementById("userInput").value;
+    console.log(userInput);
     document.getElementById("message").textContent = "User input: " + userInput;
-    // You can perform further actions with the input here
+});
 
-    // Optional: Reset the form after saving the input
-    document.getElementById("userInput").value = "";
-}
