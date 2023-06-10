@@ -1,4 +1,14 @@
 .popup {
-    width: 500px;
-    height: 500px;
+    width: 700px;
+    height: 550px;
+    background: linear-gradient(180deg, #FFFFFF 0%, rgba(52, 75, 197, 0.81) 100%);
   }
+
+.images-straightfwrd{
+    position: absolute;
+    width: 328px;
+    height: 124px;
+    background-image: url(images/strAIghtfwrd.png);
+    background-size: 100%;
+    background-repeat: no-repeat;
+}

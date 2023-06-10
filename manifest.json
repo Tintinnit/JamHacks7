@@ -8,14 +8,12 @@
         "48" : "./images/logo48.png",
         "128" : "./images/logo128.png"
     },
-    "page_action" : {
-        "default_icon" : {
-            "16" : "./images/logo16-2.png",
-            "48" : "./images/logo48-2.png",
-            "128" : "./images/logo128-2.png"
-        } 
-    },
     "action": {
+        "default_icon": {
+            "16": "./images/logo16-2.png",
+            "48": "./images/logo48-2.png",
+            "128": "./images/logo128-2.png"
+          },
         "default_popup" : "index.html",
         "default_title" : "HamJacks"
     }
