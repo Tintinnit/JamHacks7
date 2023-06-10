@@ -16,5 +16,11 @@
           },
         "default_popup" : "index.html",
         "default_title" : "strAIghtfwrd"
-    }
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.google.com/*"],
+          "js": ["content.js"]
+        }
+    ]
 }
