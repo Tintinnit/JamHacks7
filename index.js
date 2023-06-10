@@ -21,16 +21,20 @@ app.listen(port, () => {
 });
 
 
-async function checkTermsOfService(url) {
+async function checkTermsOfService (url) {
 
-    axios.get(url, {maxRedirects: 10}).then(response => {
-        const htmlContent = response.data;
-    
-        // Perform the check for terms of service in the HTML content
-        if (htmlContent.includes('Terms') || htmlContent.includes('terms') ) {
+    const browser = await puppeteer.launch();
+    const page = await browser.newPage();
+    await page.goto(URL);
+
+    const htmlContent = await page.content();
+
+    if (htmlContent.includes('Terms') || htmlContent.includes('terms') ) {
         console.log('Terms of service found.');
         } else {
         console.log('Terms of service not found.');
         }
-    });
-  }
+
+    await browser.close();
+
+}

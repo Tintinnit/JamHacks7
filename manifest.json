@@ -1,6 +1,6 @@
 {
     "manifest_version" : 3,
-    "name" : "JamHacks7 Project",
+    "name" : "strAIghtfwrd",
     "description" : "Description",
     "version" : "0.1",
     "icons" : {
@@ -15,12 +15,6 @@
             "128": "./images/logo128-2.png"
           },
         "default_popup" : "index.html",
-        "default_title" : "HamJacks"
-    },
-    "content_scripts": [
-        {
-          "matches": ["https://www.google.com/*"],
-          "js": ["content.js"]
-        }
-    ]
+        "default_title" : "strAIghtfwrd"
+    }
 }
