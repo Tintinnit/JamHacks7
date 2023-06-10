@@ -16,5 +16,13 @@
           },
         "default_popup" : "index.html",
         "default_title" : "strAIghtfwrd"
-    }
+    },
+    "background" : {
+        "service_worker": "background.js"
+    },
+    "permissions": [
+        "notifications",
+        "storage",
+        "alarms"
+    ]
 }
