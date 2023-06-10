@@ -14,5 +14,9 @@
             "48" : "./images/logo48-2.png",
             "128" : "./images/logo128-2.png"
         } 
-    }
+    },
+    "content_scripts" : [{
+        "matches" : ["https://www.google.com/*"],
+        "css" : ["main.css"]
+    }]
 }
