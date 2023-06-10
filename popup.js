@@ -12,8 +12,13 @@ submitBtn.addEventListener("click", () => {
     })
     .then((response) => response.json())
     .then((data) => {
-        console.log(data);
-        document.getElementById("message").textContent = "Simplified version: " + data.body;
+        document.getElementById("message").innerHTML = "";
+        data.body.split("~").forEach((line) => {
+            const p = document.createElement("p");
+            p.textContent = line;
+            document.getElementById("message").appendChild(p);
+        });
+        // document.getElementById("message").textContent = "Simplified version: " + data.body;
     })
 });
 
