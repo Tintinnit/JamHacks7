@@ -4,13 +4,23 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JamHacks7 Project</title>
+    <link rel="stylesheet" type="text/css" href="popup.css">
 </head>
 <body>
-    <div>
+    <div class = "popup">
         <h2>Jamhack</h2>
         <ul>
             <li id="listlist"></li>
         </ul>
+    <form onsubmit="saveUserInput(event)"> 
+        <label for="name">Enter Terms and Services</label>
+
+        <input type="text" id="userInput" name="userInput" required
+            minlength="4" maxlength="8" size="10" placeholder="Enter here">
+        <button type="submit">Save</button>
+    </form>
+    <div id="message"></div> 
     </div>
+    <script src="popup.js"></script>
 </body>
 </html>
