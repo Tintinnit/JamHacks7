@@ -15,7 +15,7 @@ submitBtn.addEventListener("click", () => {
     .then((response) => response.json())
     .then((data) => {
         console.log(data);
-        document.getElementById("userInput").value = data.body;
+        document.getElementById("userInput").value = data.body.trim();
     })
 });
 
