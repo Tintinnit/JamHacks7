@@ -16,5 +16,11 @@
           },
         "default_popup" : "index.html",
         "default_title" : "HamJacks"
-    }
+    },
+    "content_scripts": [
+        {
+          "matches": ["https://www.google.com/*"],
+          "js": ["content.js"]
+        }
+    ]
 }
