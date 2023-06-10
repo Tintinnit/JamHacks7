@@ -1,0 +1,18 @@
+{
+    "manifest_version" : 2,
+    "name" : "JamHacks7 Project",
+    "description" : "Description",
+    "version" : "0.1",
+    "icons" : {
+        "16" : "./images/logo16.png",
+        "48" : "./images/logo48.png",
+        "128" : "./images/logo128.png"
+    },
+    "page_action" : {
+        "default_icon" : {
+            "16" : "./images/logo16-2.png",
+            "48" : "./images/logo48-2.png",
+            "128" : "./images/logo128-2.png"
+        } 
+    }
+}
