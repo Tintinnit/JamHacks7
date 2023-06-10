@@ -1,4 +1,6 @@
 const submitBtn = document.getElementById("submit");
+const clearBtn = document.getElementById("clear");
+
 
 let userInput = "";
 submitBtn.addEventListener("click", () => {
@@ -17,3 +19,6 @@ submitBtn.addEventListener("click", () => {
     })
 });
 
+clearBtn.addEventListener("click", () => {
+    document.getElementById("userInput").value = "";
+});
