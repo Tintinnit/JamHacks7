@@ -1,10 +1,17 @@
 const submitBtn = document.getElementById("submit");
 const clearBtn = document.getElementById("clear");
+const errorMsg = document.getElementById("errorMsg");
 
 
 let userInput = "";
 submitBtn.addEventListener("click", () => {
-    if (userInput === "") {
+    if (document.getElementById("userInput").value.length > 10000) {
+        errorMsg.style.visibility = "visible";
+        console.log("a")
+        return;
+    }
+    if (userInput === "" && document.getElementById("userInput").value !== "") {
+        errorMsg.style.visibility = "hidden";
         userInput = document.getElementById("userInput").value;
     }
     submitBtn.disabled = true;
@@ -26,6 +33,7 @@ submitBtn.addEventListener("click", () => {
 });
 
 clearBtn.addEventListener("click", () => {
+    errorMsg.style.visibility = "hidden";
     document.getElementById("userInput").value = "";
     submitBtn.innerHTML = "Simplify";
 });
